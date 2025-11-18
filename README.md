@@ -5,8 +5,8 @@
 GitHub 上で「Code」ボタンから URL をコピーし、以下のコマンドでクローンしてください。
 
 ```sh
-git clone https://github.com/niyu07/dev-journey-web.git
-cd dev-journey-web
+git clone https://github.com/niyu07/team1.git
+cd team1
 ```
 
 ## 改行コード（LF）推奨について
