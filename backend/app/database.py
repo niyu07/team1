@@ -30,3 +30,4 @@ def seed_data(db):
 
     db.add_all(items)
     db.commit()
+
