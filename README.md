@@ -111,7 +111,7 @@ pip install -r requirements.txt
 4. サーバー起動
 
 ```sh
-uvicorn app.main:app --reload
+uvicorn app.API:app --reload
 ```
 
 サーバー起動後、API 仕様や動作確認はブラウザで [http://localhost:8000/docs](http://localhost:8000/docs)（Swagger UI）にアクセスすると、インタラクティブな API ドキュメントが利用できます。
