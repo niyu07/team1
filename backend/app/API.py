@@ -2,6 +2,7 @@ from fastapi import FastAPI, Depends
 from fastapi.middleware.cors import CORSMiddleware
 
 from .database import SessionLocal, init_db, seed_data
+from sqlalchemy.orm import Session
 from .models import Item
 
 app = FastAPI()
@@ -24,7 +25,7 @@ def on_startup():
     db.close()
 
 
-def get_DB():
+def get_DB() -> Session:
     db = SessionLocal()
     try:
         yield db
@@ -39,7 +40,7 @@ async def hello():
 
 # アイテムリストで指定することを想定し，ダミーのエンドポイントを作成
 @app.get("/ItemList/getItem/")
-async def get_item(db: SessionLocal = Depends(get_DB)):
+async def get_item(db: Session = Depends(get_DB)):
     items = db.query(Item).all()
     return items
 
