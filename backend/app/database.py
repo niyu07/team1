@@ -14,8 +14,9 @@ Base = declarative_base()
 
 # ★★★ 超重要：テーブルを自動作成する ★★★
 def init_db():
-    # from . import models
+    from . import models
 
+    _ = models
     Base.metadata.create_all(bind=engine)
 
 
