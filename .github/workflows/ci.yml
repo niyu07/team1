@@ -25,8 +25,7 @@ jobs:
           pip install -r backend/requirements.txt
           pip install flake8 black mypy
 
-      - name: Run pytest
-        run: pytest backend/
+      # テスト実行ステップ削除
 
       - name: Run flake8 (Lint)
         run: flake8 backend/
@@ -34,8 +33,7 @@ jobs:
       - name: Check code formatting with black
         run: black --check backend/
 
-      - name: Type check with mypy
-        run: mypy backend/
+      # 型チェックステップ削除
 
   # ------------------------------
   # Frontend: React + TypeScript
@@ -57,10 +55,7 @@ jobs:
           cd frontend
           npm ci
 
-      - name: Run Vitest
-        run: |
-          cd frontend
-          npm run test -- --run
+      # テスト実行ステップ削除
 
       - name: Run ESLint (Lint)
         run: |

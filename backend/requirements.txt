@@ -1,5 +1,7 @@
 fastapi
 uvicorn[standard]
 python-dotenv
-pytest
 Black
+autopep8
+sqlalchemy
+sqlalchemy2-stubs
