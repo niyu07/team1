@@ -26,7 +26,7 @@ class ItemCreate(ItemBase):
 class ItemRead(ItemBase):
     id: int
     # dateもStringまたはDateTimeとして返す
-    date: str | datetime.datetime | None = None 
+    date: str | None = None 
     
     # SQLAlchemyモデルからデータを読み込む設定
     class Config:
