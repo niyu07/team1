@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import SearchBar from "./components/SearchBar/SearchBar";
 import "./App.css";
 
-
 function App() {
   const [message, setMessage] = useState<string>("Loading...");
 
@@ -12,14 +11,14 @@ function App() {
       .then((data) => setMessage(data.message))
       .catch((err) => setMessage("Error: " + err));
   }, []);
-  
-   return (
-     <div>
-      <SearchBar/>
-       <h1>Frontend + Backend</h1>
-       <p>{message}</p>
-     </div>
-   );
+
+  return (
+    <div>
+      <SearchBar />
+      <h1>Frontend + Backend</h1>
+      <p>{message}</p>
+    </div>
+  );
 }
 
 export default App;

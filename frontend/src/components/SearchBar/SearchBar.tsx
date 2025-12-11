@@ -28,14 +28,14 @@ export default function ShoppingList() {
   }, []);
 
   useEffect(() => {
-    const result = data.filter(item => matches(item, query, field));
+    const result = data.filter((item) => matches(item, query, field));
     setFiltered(result);
   }, [query, field, data]);
 
   const matches = (item: Item, q: string, field: string) => {
     if (!q) return true;
     if (field === "all") {
-      return Object.values(item).some(v => String(v).includes(q));
+      return Object.values(item).some((v) => String(v).includes(q));
     }
     return String(item[field as keyof Item] || "").includes(q);
   };
@@ -59,7 +59,14 @@ export default function ShoppingList() {
           <option value="tag">タグ</option>
           <option value="status">状態</option>
         </select>
-        <button onClick={() => { setQuery(""); setField("all"); }}>クリア</button>
+        <button
+          onClick={() => {
+            setQuery("");
+            setField("all");
+          }}
+        >
+          クリア
+        </button>
       </div>
 
       <div className="meta">{filtered.length} 件表示中</div>
@@ -70,7 +77,11 @@ export default function ShoppingList() {
         <table>
           <thead>
             <tr>
-              <th>商品</th><th>日付</th><th>詳細</th><th>タグ</th><th>状態</th>
+              <th>商品</th>
+              <th>日付</th>
+              <th>詳細</th>
+              <th>タグ</th>
+              <th>状態</th>
             </tr>
           </thead>
           <tbody>

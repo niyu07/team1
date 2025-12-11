@@ -1,5 +1,12 @@
 :root {
-  font-family: system-ui, -apple-system, "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", "Meiryo", sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    "Hiragino Kaku Gothic ProN",
+    "Noto Sans JP",
+    "Yu Gothic",
+    "Meiryo",
+    sans-serif;
 }
 
 body {
@@ -9,15 +16,13 @@ body {
 }
 
 .container {
-  width: 100% ;
-  max-width: none ;
-  margin: 0 ;
-  padding: 16px 24px ;
-  border-radius: 0 ;
-  box-shadow: none ;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 16px 24px;
+  border-radius: 0;
+  box-shadow: none;
 }
-
-
 
 h1 {
   font-size: 20px;
@@ -57,7 +62,8 @@ table {
   margin-top: 8px;
 }
 
-th, td {
+th,
+td {
   padding: 10px;
   border-bottom: 1px solid #f0f0f0;
   text-align: left;
@@ -81,7 +87,8 @@ tr.status-done td {
 }
 
 @media (max-width: 640px) {
-  th:nth-child(4), td:nth-child(4) {
+  th:nth-child(4),
+  td:nth-child(4) {
     display: none;
   }
 }
