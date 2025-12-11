@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import SearchBar from "./components/SearchBar/SearchBar";
 import "./App.css";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
 
   return (
     <div>
+      <SearchBar />
       <h1>Frontend + Backend</h1>
       <p>{message}</p>
     </div>

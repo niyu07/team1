@@ -1,0 +1,94 @@
+:root {
+  font-family:
+    system-ui,
+    -apple-system,
+    "Hiragino Kaku Gothic ProN",
+    "Noto Sans JP",
+    "Yu Gothic",
+    "Meiryo",
+    sans-serif;
+}
+
+body {
+  padding: 24px;
+  background: #f7f7fb;
+  color: #111;
+}
+
+.container {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 16px 24px;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+h1 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.controls {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+input[type="search"] {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.meta {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+}
+
+th,
+td {
+  padding: 10px;
+  border-bottom: 1px solid #f0f0f0;
+  text-align: left;
+  font-size: 14px;
+}
+
+th {
+  background: #fafafa;
+  font-weight: 600;
+}
+
+tr.status-done td {
+  opacity: 0.6;
+  text-decoration: line-through;
+}
+
+.no-result {
+  text-align: center;
+  padding: 20px;
+  color: #888;
+}
+
+@media (max-width: 640px) {
+  th:nth-child(4),
+  td:nth-child(4) {
+    display: none;
+  }
+}
